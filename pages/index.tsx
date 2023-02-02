@@ -51,7 +51,7 @@ function Overview() {
               flex={1}
             >
               <Box />
-              <Box>
+              {/* <Box>
                 <Button
                   component={Link}
                   href="/dashboards/crypto"
@@ -60,7 +60,7 @@ function Overview() {
                 >
                   Live Preview
                 </Button>
-              </Box>
+              </Box> */}
             </Box>
           </Box>
         </Container>
@@ -68,13 +68,13 @@ function Overview() {
       <Hero />
       <Container maxWidth="lg" sx={{ mt: 8 }}>
         <Typography textAlign="center" variant="subtitle1">
-          Crafted by{' '}
+          Developed by{' '}
           <Link
-            href="https://bloomui.com"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
           >
-            BloomUI.com
+            hire-ai.com
           </Link>
         </Typography>
       </Container>
