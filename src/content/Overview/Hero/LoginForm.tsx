@@ -5,20 +5,19 @@ import { useRouter } from 'next/router';
 
 const LoginForm = () => {
   const router = useRouter();
-  const { control } = useForm({
-    // const { control, handleSubmit } = useForm({
+  const { control, handleSubmit } = useForm({
     defaultValues: {
       username: '',
       password: ''
     }
   });
 
-  // const onSubmit = (data, e: any) => {
-  //   e.preventDefault()
-  //   console.log(data);
-  //   // router.push('/dashboards/crypto')
-  //   router.push('/dashboards/crypto', undefined, { shallow: true })
-  // };
+  const onSubmit = (data, e: any) => {
+    e.preventDefault()
+    console.log(data);
+    // router.push('/dashboards/crypto')
+    router.push('/dashboards/crypto', undefined, { shallow: true })
+  };
 
   return (
     <Box sx={{ px: 2 }}>
@@ -63,7 +62,7 @@ const LoginForm = () => {
           />
         </Box>
         <Box>
-          <Button variant="contained" onClick={() => router.push('/dashboards/crypto', undefined, { shallow: true })} fullWidth>
+          <Button variant="contained" onClick={handleSubmit(onSubmit)} fullWidth>
             Sign In
           </Button>
         </Box>
