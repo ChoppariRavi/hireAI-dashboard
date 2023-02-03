@@ -1,2 +1,3 @@
-[functions]
-  included_files = ["!node_modules/A_LARGE_MODULE/**/*"]
+[build]
+  command = "npm run build"
+  publish = ".next"
