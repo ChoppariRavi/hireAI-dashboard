@@ -15,7 +15,8 @@ const LoginForm = () => {
   const onSubmit = (data, e: any) => {
     e.preventDefault()
     console.log(data);
-    router.push('/dashboards/crypto')
+    // router.push('/dashboards/crypto')
+    router.push('/dashboards/crypto', undefined, { shallow: true })
   };
 
   return (
