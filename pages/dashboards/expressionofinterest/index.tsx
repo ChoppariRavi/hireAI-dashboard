@@ -7,19 +7,15 @@ import PageTitleWrapper from '@/components/PageTitleWrapper';
 import { Container, Grid } from '@mui/material';
 import Footer from '@/components/Footer';
 
-import AccountBalance from '@/content/Dashboards/Crypto/AccountBalance';
-import Wallets from '@/content/Dashboards/Crypto/Wallets';
-import AccountSecurity from '@/content/Dashboards/Crypto/AccountSecurity';
-import WatchList from '@/content/Dashboards/Crypto/WatchList';
 
-function DashboardCrypto() {
+function ExpressionofInterest() {
   return (
     <>
       <Head>
         <title>Crypto Dashboard</title>
       </Head>
       <PageTitleWrapper>
-        <PageHeader />
+        <PageHeader title="Expression of Interest!" />
       </PageTitleWrapper>
       <Container maxWidth="lg">
         <Grid
@@ -29,7 +25,7 @@ function DashboardCrypto() {
           alignItems="stretch"
           spacing={4}
         >
-          <Grid item xs={12}>
+          {/* <Grid item xs={12}>
             <AccountBalance />
           </Grid>
           <Grid item lg={8} xs={12}>
@@ -40,7 +36,7 @@ function DashboardCrypto() {
           </Grid>
           <Grid item xs={12}>
             <WatchList />
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
       <Footer />
@@ -48,6 +44,6 @@ function DashboardCrypto() {
   );
 }
 
-DashboardCrypto.getLayout = (page) => <SidebarLayout>{page}</SidebarLayout>;
+ExpressionofInterest.getLayout = (page) => <SidebarLayout>{page}</SidebarLayout>;
 
-export default DashboardCrypto;
+export default ExpressionofInterest;

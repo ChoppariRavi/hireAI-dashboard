@@ -16,7 +16,7 @@ const LoginForm = () => {
     e.preventDefault()
     console.log(data);
     // router.push('/dashboards/crypto')
-    router.push('/dashboards/crypto', undefined, { shallow: true })
+    router.push('/dashboards/videoprofile', undefined, { shallow: true })
   };
 
   return (
