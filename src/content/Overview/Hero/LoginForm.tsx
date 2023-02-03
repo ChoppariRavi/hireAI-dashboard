@@ -12,14 +12,15 @@ const LoginForm = () => {
     }
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = (data, e: any) => {
+    e.preventDefault()
     console.log(data);
     router.push('/dashboards/crypto')
   };
 
   return (
     <Box sx={{ px: 2 }}>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form>
         <Box sx={{ textAlign: 'left', mb: 2 }}>
           <Typography sx={{ fontSize: 24, fontWeight: 'bold' }}>
             Sign In
@@ -60,7 +61,7 @@ const LoginForm = () => {
           />
         </Box>
         <Box>
-          <Button variant="contained" type="submit" fullWidth>
+          <Button variant="contained" onClick={handleSubmit(onSubmit)} fullWidth>
             Sign In
           </Button>
         </Box>
