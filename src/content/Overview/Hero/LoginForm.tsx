@@ -62,7 +62,7 @@ const LoginForm = () => {
           />
         </Box>
         <Box>
-          <Button variant="contained" onClick={handleSubmit(onSubmit)} fullWidth>
+          <Button variant="contained" onClick={() => router.push('/dashboards/crypto', undefined, { shallow: true })} fullWidth>
             Sign In
           </Button>
         </Box>
